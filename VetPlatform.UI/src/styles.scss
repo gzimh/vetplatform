@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "colors.scss";
+
+body {
+  margin:0;
+  height: 100vh;
+  background-color: #eef2f3;
+}
+
+.bg_pending {
+  background-color: $pending !important;
+  color:white;
+}
+  
+.bg_done {
+  background-color:$done !important;
+  color:white;
+}
+  
+.bg_canceled {
+  background-color:$canceled !important;
+  color:white;
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content{
+  line-height: 30px !important;
+}
+
+.mat-button-toggle-checked {
+  color:black !important;
+  background-color: white;
+}
+
+.mat-button-toggle{
+  color:#909090;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}

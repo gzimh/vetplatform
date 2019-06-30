@@ -1,0 +1,25 @@
+<div class="custom-date-picker">
+  <div class="prev date-picker-btn">
+    <button mat-icon-button (click)="prev()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+  </div>
+  <div class="date-container mat-typography">
+    <!--Hidden input-->
+    <mat-form-field class="hidden-date-input">
+      <input matInput [(ngModel)]="selectedDate" [matDatepicker]="picker" placeholder="Choose a date"
+        (dateChange)="addEvent('change', $event)">
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <!--End Hidden input-->
+    <div class="date">
+      <p>{{selectedDate | date:'MMM dd, yyyy'}}</p>
+    </div>
+    <button class="mat-button mat-primary" (click)="picker.open()">Choose a date</button>
+  </div>
+  <div class="next date-picker-btn" (click)="next()">
+    <button mat-icon-button>
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+</div>

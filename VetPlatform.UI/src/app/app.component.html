@@ -1,0 +1,16 @@
+<ng-container *ngIf="!loading">
+    <app-header></app-header>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="loading">
+    <div class="loading-container">
+        <mat-card>
+                <img src="../assets/happy_pup.png" />
+                <h1 class="mat-h1">Loading...</h1>
+        </mat-card>
+      
+    </div>
+</ng-container>

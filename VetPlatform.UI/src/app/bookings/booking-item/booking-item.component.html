@@ -1,0 +1,20 @@
+<mat-card (click)="changeStatus()">
+  <div class="booking-item">
+    <div class="user">
+      <div class="avatar">
+        <img src="https://i.imgur.com/mntCXWP.png" />
+      </div>
+      <div class="name">
+        <p>{{booking?.customer?.name}}</p>
+      </div>
+    </div>
+    <div class="time">
+      <p>{{booking?.scheduleTime}}</p>
+    </div>
+  </div>
+  <mat-chip-list>
+      <mat-chip *ngIf="booking.status == 'pending'" class="bg_pending" selected>Pending</mat-chip>
+      <mat-chip *ngIf="booking.status == 'done'" class="bg_done" selected>Done</mat-chip>
+      <mat-chip *ngIf="booking.status == 'canceled'" class="bg_canceled" selected>Canceled</mat-chip>
+  </mat-chip-list>
+</mat-card>

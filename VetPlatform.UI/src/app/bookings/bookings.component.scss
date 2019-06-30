@@ -1,0 +1,42 @@
+@import "../../colors.scss";
+
+.items {
+    padding-top:15px;
+}
+
+.load-more-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.loading-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.no-data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 80px;
+    }
+
+    p {
+        font-size: 32px;
+        color: gray;
+        padding: 40px;
+    }
+}
+
+.mat-card {
+    background-color: #fbfbfb;
+}

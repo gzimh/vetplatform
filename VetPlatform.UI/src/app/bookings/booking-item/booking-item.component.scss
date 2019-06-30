@@ -1,0 +1,38 @@
+.mat-card {
+  margin-bottom: 20px;
+  cursor: pointer;
+  .booking-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:10px;
+    .user {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .avatar {
+        img {
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+        }
+      }
+      .name {
+        margin-left: 20px;
+        font-size: 24px;
+      }
+    }
+
+    .time {
+      font-size: 24px;
+      font-style: italic;
+    }
+  }
+
+  mat-chip {
+    min-height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

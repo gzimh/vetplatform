@@ -1,0 +1,24 @@
+<mat-card>
+    <app-custom-date-picker (date)="onDateChange($event)"></app-custom-date-picker>
+
+    <div class="filters">
+        <mat-button-toggle-group name="status" [(ngModel)]="status" multiple (change)="onFilterChange()">
+            <mat-button-toggle value="pending">Pending</mat-button-toggle>
+            <mat-button-toggle value="done">Done</mat-button-toggle>
+            <mat-button-toggle value="canceled">Canceled</mat-button-toggle>
+          </mat-button-toggle-group>          
+    </div>
+    <div *ngIf="!loading && (bookings && bookings.length > 0)" class="items">
+        <app-booking-item *ngFor="let booking of bookings" [booking]="booking"></app-booking-item>
+    </div>
+    <div *ngIf="!loading && (!bookings || bookings.length <= 0)" class="no-data">
+        <p>No data found.</p>
+        <img src="../../assets/dog.png" />
+    </div>
+    <div class="load-more-container" *ngIf="!loading && hasMore">
+        <button (click)="loadMore()" mat-raised-button color="primary">LOAD MORE</button>
+    </div>
+    <div *ngIf="loading" class="loading-bar">
+        <mat-spinner></mat-spinner>
+    </div>
+</mat-card>
