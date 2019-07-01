@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using VetPlatform.Api.Exceptions;
 using VetPlatform.Api.Models;
@@ -7,15 +9,18 @@ using VetPlatform.Api.Services;
 
 namespace VetPlatform.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BookingsController : ControllerBase
     {
         private IBookingsService _bookingsService;
+        private IHostingEnvironment _env;
 
-        public BookingsController(IBookingsService bookingsService)
+        public BookingsController(IBookingsService bookingsService, IHostingEnvironment env)
         {
             _bookingsService = bookingsService;
+            _env = env;
         }
 
         [HttpGet]
@@ -29,7 +34,15 @@ namespace VetPlatform.Api.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                if (_env.IsProduction())
+                {
+                    // log error
+                    return BadRequest("Something went wrong.");
+                }
+                else
+                {
+                    return BadRequest(ex.Message);
+                }
             }
         }
 

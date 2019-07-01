@@ -22,7 +22,8 @@ namespace VetPlatform.Auth
         {
             return new ApiResource[]
             {
-                new ApiResource("vp_portal_api", "VP Portal API")
+                new ApiResource("vp_portal_api", "VP Portal API"),
+                new ApiResource("vp_store_api", "VP Store API")
             };
         }
 

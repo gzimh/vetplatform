@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -44,6 +45,8 @@ namespace VetPlatform.Api
 
             services.AddTransient<IBookingsService, BookingsService>();
 
+            services.AddTransient<ITenantService, TenantService>();
+
             services.AddCors(options =>
             {
                 options.AddPolicy("dev",
@@ -59,6 +62,15 @@ namespace VetPlatform.Api
             services.AddHealthChecks();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                // base-address of your identityserver
+                options.Authority = Configuration["IDPAuthority"];
+                // name of the API resource
+                options.Audience = "vp_portal_api";
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -72,10 +84,9 @@ namespace VetPlatform.Api
             {
                 app.UseHsts();
             }
-
             app.UseHealthChecks("/health");
-
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }
