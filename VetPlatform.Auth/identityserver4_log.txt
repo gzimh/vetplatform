@@ -6154,3 +6154,260 @@ Error Number:208,State:1,Class:16
 2019-06-30 18:30:43.460 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
 2019-06-30 18:30:43.460 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
 2019-06-30 18:30:43.460 +02:00 [DBG] Start discovery request
+2019-07-01 23:30:39.289 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-01 23:30:39.346 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-01 23:30:39.348 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-01 23:30:39.349 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-01 23:30:39.349 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-01 23:30:39.349 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-01 23:30:39.349 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-01 23:30:39.834 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:39.838 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-01 23:30:39.838 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:39.871 +02:00 [DBG] Login Url: /Account/Login
+2019-07-01 23:30:39.871 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-01 23:30:39.871 +02:00 [DBG] Logout Url: /Account/Logout
+2019-07-01 23:30:39.871 +02:00 [DBG] ConsentUrl Url: /consent
+2019-07-01 23:30:39.871 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-01 23:30:39.871 +02:00 [DBG] Error Url: /home/error
+2019-07-01 23:30:39.871 +02:00 [DBG] Error Id Parameter: errorId
+2019-07-01 23:30:39.891 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-01 23:30:40.002 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-01 23:30:40.002 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-01 23:30:40.005 +02:00 [DBG] Start discovery request
+2019-07-01 23:30:40.069 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration/jwks from origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:40.069 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-01 23:30:40.069 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:40.070 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-01 23:30:40.071 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-01 23:30:40.071 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-01 23:30:40.078 +02:00 [DBG] Start key discovery request
+2019-07-01 23:30:40.157 +02:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-01 23:30:40.161 +02:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-01 23:30:40.161 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-01 23:30:40.165 +02:00 [DBG] Start authorize request
+2019-07-01 23:30:40.176 +02:00 [DBG] No user present in authorize request
+2019-07-01 23:30:40.181 +02:00 [DBG] Start authorize request protocol validation
+2019-07-01 23:30:40.194 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-01 23:30:40.221 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-01 23:30:40.234 +02:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"vp_portal","ClientName":"VP Portal","RedirectUri":"http://pets.vetplatform.local:4200","AllowedRedirectUris":["http://pets.vetplatform.local:4200","http://pets.vetplatform.local:4200/index.html","http://pets.vetplatform.local:4200/callback.html","http://pets.vetplatform.local:4200/silent.html","http://pets.vetplatform.local:4200/popup.html"],"SubjectId":"anonymous","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile vp_portal_api","State":"GiBpFU8RqlTjSy2JJZmWrBa7wwXkDWtIVFifBAS2","UiLocales":null,"Nonce":"GiBpFU8RqlTjSy2JJZmWrBa7wwXkDWtIVFifBAS2","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"id_token token","client_id":"vp_portal","state":"GiBpFU8RqlTjSy2JJZmWrBa7wwXkDWtIVFifBAS2","redirect_uri":"http://pets.vetplatform.local:4200","scope":"openid profile vp_portal_api","nonce":"GiBpFU8RqlTjSy2JJZmWrBa7wwXkDWtIVFifBAS2"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-01 23:30:40.264 +02:00 [INF] Showing login: User is not authenticated
+2019-07-01 23:30:40.504 +02:00 [DBG] Start authorize request protocol validation
+2019-07-01 23:30:40.504 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-01 23:30:40.504 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-01 23:30:40.506 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-01 23:30:50.301 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:50.301 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-01 23:30:50.301 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:50.301 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-01 23:30:50.302 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-01 23:30:50.302 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-01 23:30:50.302 +02:00 [DBG] Start discovery request
+2019-07-01 23:30:50.335 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration/jwks from origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:50.335 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-01 23:30:50.335 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:50.336 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-01 23:30:50.336 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-01 23:30:50.336 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-01 23:30:50.336 +02:00 [DBG] Start key discovery request
+2019-07-01 23:30:50.367 +02:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-01 23:30:50.367 +02:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-01 23:30:50.367 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-01 23:30:50.367 +02:00 [DBG] Start authorize request
+2019-07-01 23:30:50.367 +02:00 [DBG] No user present in authorize request
+2019-07-01 23:30:50.367 +02:00 [DBG] Start authorize request protocol validation
+2019-07-01 23:30:50.367 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-01 23:30:50.368 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-01 23:30:50.368 +02:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"vp_portal","ClientName":"VP Portal","RedirectUri":"http://pets.vetplatform.local:4200","AllowedRedirectUris":["http://pets.vetplatform.local:4200","http://pets.vetplatform.local:4200/index.html","http://pets.vetplatform.local:4200/callback.html","http://pets.vetplatform.local:4200/silent.html","http://pets.vetplatform.local:4200/popup.html"],"SubjectId":"anonymous","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile vp_portal_api","State":"lGafpCYbDwpEo0p2ulpoxPzkal1rYyHv3XJ8CbD0","UiLocales":null,"Nonce":"lGafpCYbDwpEo0p2ulpoxPzkal1rYyHv3XJ8CbD0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"id_token token","client_id":"vp_portal","state":"lGafpCYbDwpEo0p2ulpoxPzkal1rYyHv3XJ8CbD0","redirect_uri":"http://pets.vetplatform.local:4200","scope":"openid profile vp_portal_api","nonce":"lGafpCYbDwpEo0p2ulpoxPzkal1rYyHv3XJ8CbD0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-01 23:30:50.368 +02:00 [INF] Showing login: User is not authenticated
+2019-07-01 23:30:50.384 +02:00 [DBG] Start authorize request protocol validation
+2019-07-01 23:30:50.384 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-01 23:30:50.385 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-01 23:30:50.385 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-01 23:30:52.626 +02:00 [DBG] Start authorize request protocol validation
+2019-07-01 23:30:52.626 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-01 23:30:52.626 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-01 23:30:53.249 +02:00 [DBG] Augmenting SignInContext
+2019-07-01 23:30:53.250 +02:00 [DBG] Adding idp claim with value: local
+2019-07-01 23:30:53.250 +02:00 [DBG] Adding amr claim with value: pwd
+2019-07-01 23:30:53.251 +02:00 [DBG] Adding auth_time claim with value: 1562016653
+2019-07-01 23:30:53.258 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-01 23:30:53.268 +02:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"f4045d70-ea99-4d8a-a998-56b27a189eec","DisplayName":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLNUDDEI4BRU:00000008","TimeStamp":"2019-07-01T21:30:53.0000000Z","ProcessId":7092,"LocalIpAddress":"127.0.0.1:45109","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-07-01 23:30:53.269 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-01 23:30:53.303 +02:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-01 23:30:53.303 +02:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-01 23:30:53.303 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-01 23:30:53.312 +02:00 [DBG] Start authorize callback request
+2019-07-01 23:30:53.315 +02:00 [DBG] User in authorize request: f4045d70-ea99-4d8a-a998-56b27a189eec
+2019-07-01 23:30:53.315 +02:00 [DBG] Start authorize request protocol validation
+2019-07-01 23:30:53.315 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-01 23:30:53.315 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-01 23:30:53.315 +02:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"vp_portal","ClientName":"VP Portal","RedirectUri":"http://pets.vetplatform.local:4200","AllowedRedirectUris":["http://pets.vetplatform.local:4200","http://pets.vetplatform.local:4200/index.html","http://pets.vetplatform.local:4200/callback.html","http://pets.vetplatform.local:4200/silent.html","http://pets.vetplatform.local:4200/popup.html"],"SubjectId":"f4045d70-ea99-4d8a-a998-56b27a189eec","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile vp_portal_api","State":"lGafpCYbDwpEo0p2ulpoxPzkal1rYyHv3XJ8CbD0","UiLocales":null,"Nonce":"lGafpCYbDwpEo0p2ulpoxPzkal1rYyHv3XJ8CbD0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"84255254530fa948e91c1664c4c44891","Raw":{"response_type":"id_token token","client_id":"vp_portal","state":"lGafpCYbDwpEo0p2ulpoxPzkal1rYyHv3XJ8CbD0","redirect_uri":"http://pets.vetplatform.local:4200","scope":"openid profile vp_portal_api","nonce":"lGafpCYbDwpEo0p2ulpoxPzkal1rYyHv3XJ8CbD0"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-01 23:30:53.353 +02:00 [DBG] Client is configured to not require consent, no consent is required
+2019-07-01 23:30:53.359 +02:00 [DBG] Creating Implicit Flow response.
+2019-07-01 23:30:53.368 +02:00 [DBG] Getting claims for access token for client: vp_portal
+2019-07-01 23:30:53.368 +02:00 [DBG] Getting claims for access token for subject: f4045d70-ea99-4d8a-a998-56b27a189eec
+2019-07-01 23:30:53.443 +02:00 [DBG] Getting claims for identity token for subject: f4045d70-ea99-4d8a-a998-56b27a189eec and client: vp_portal
+2019-07-01 23:30:53.443 +02:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-01 23:30:53.452 +02:00 [INF] {"ClientId":"vp_portal","ClientName":"VP Portal","RedirectUri":"http://pets.vetplatform.local:4200","Endpoint":"Authorize","SubjectId":"f4045d70-ea99-4d8a-a998-56b27a189eec","Scopes":"openid profile vp_portal_api","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****pX1A","$type":"Token"},{"TokenType":"access_token","TokenValue":"****o3VA","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLNUDDEI4BS0:00000005","TimeStamp":"2019-07-01T21:30:53.0000000Z","ProcessId":7092,"LocalIpAddress":"127.0.0.1:45109","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-01 23:30:53.453 +02:00 [INF] Authorize endpoint response
+{"SubjectId":"f4045d70-ea99-4d8a-a998-56b27a189eec","ClientId":"vp_portal","RedirectUri":"http://pets.vetplatform.local:4200","State":"lGafpCYbDwpEo0p2ulpoxPzkal1rYyHv3XJ8CbD0","Scope":"openid profile vp_portal_api","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-07-01 23:30:53.467 +02:00 [DBG] Augmenting SignInContext
+2019-07-01 23:30:53.467 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-01 23:30:54.293 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:54.293 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-01 23:30:54.293 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:54.294 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-01 23:30:54.294 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-01 23:30:54.294 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-01 23:30:54.294 +02:00 [DBG] Start discovery request
+2019-07-01 23:30:54.322 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration/jwks from origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:54.322 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-01 23:30:54.323 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-01 23:30:54.323 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-01 23:30:54.323 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-01 23:30:54.323 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-01 23:30:54.323 +02:00 [DBG] Start key discovery request
+2019-07-01 23:30:56.388 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-01 23:30:56.389 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-01 23:30:56.389 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-01 23:30:56.389 +02:00 [DBG] Start discovery request
+2019-07-01 23:30:56.514 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-01 23:30:56.514 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-01 23:30:56.515 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-01 23:30:56.515 +02:00 [DBG] Start key discovery request
+2019-07-03 22:02:14.726 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-03 22:02:14.764 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-03 22:02:14.767 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-03 22:02:14.767 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-03 22:02:14.767 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-03 22:02:14.767 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-03 22:02:14.767 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-03 22:02:15.294 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:15.305 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-03 22:02:15.305 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:15.344 +02:00 [DBG] Login Url: /Account/Login
+2019-07-03 22:02:15.344 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-03 22:02:15.344 +02:00 [DBG] Logout Url: /Account/Logout
+2019-07-03 22:02:15.344 +02:00 [DBG] ConsentUrl Url: /consent
+2019-07-03 22:02:15.344 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-03 22:02:15.344 +02:00 [DBG] Error Url: /home/error
+2019-07-03 22:02:15.344 +02:00 [DBG] Error Id Parameter: errorId
+2019-07-03 22:02:15.358 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-03 22:02:15.518 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-03 22:02:15.519 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-03 22:02:15.525 +02:00 [DBG] Start discovery request
+2019-07-03 22:02:15.643 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration/jwks from origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:15.643 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-03 22:02:15.643 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:15.644 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-03 22:02:15.646 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-03 22:02:15.646 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-03 22:02:15.651 +02:00 [DBG] Start key discovery request
+2019-07-03 22:02:15.728 +02:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-03 22:02:15.731 +02:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-03 22:02:15.731 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-03 22:02:15.734 +02:00 [DBG] Start authorize request
+2019-07-03 22:02:15.741 +02:00 [DBG] No user present in authorize request
+2019-07-03 22:02:15.744 +02:00 [DBG] Start authorize request protocol validation
+2019-07-03 22:02:15.757 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-03 22:02:15.784 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-03 22:02:15.808 +02:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"vp_portal","ClientName":"VP Portal","RedirectUri":"http://pets.vetplatform.local:4200","AllowedRedirectUris":["http://pets.vetplatform.local:4200","http://pets.vetplatform.local:4200/index.html","http://pets.vetplatform.local:4200/callback.html","http://pets.vetplatform.local:4200/silent.html","http://pets.vetplatform.local:4200/popup.html"],"SubjectId":"anonymous","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile vp_portal_api","State":"gnPT9t4Ey3BdSdIWFfLwLWsffPvfzWmzq4dTPpXH","UiLocales":null,"Nonce":"gnPT9t4Ey3BdSdIWFfLwLWsffPvfzWmzq4dTPpXH","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"id_token token","client_id":"vp_portal","state":"gnPT9t4Ey3BdSdIWFfLwLWsffPvfzWmzq4dTPpXH","redirect_uri":"http://pets.vetplatform.local:4200","scope":"openid profile vp_portal_api","nonce":"gnPT9t4Ey3BdSdIWFfLwLWsffPvfzWmzq4dTPpXH"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-03 22:02:15.831 +02:00 [INF] Showing login: User is not authenticated
+2019-07-03 22:02:16.146 +02:00 [DBG] Start authorize request protocol validation
+2019-07-03 22:02:16.147 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-03 22:02:16.147 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-03 22:02:16.151 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-03 22:02:22.445 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:4200
+2019-07-03 22:02:22.445 +02:00 [DBG] Client list checked and origin: http://localhost:4200 is not allowed
+2019-07-03 22:02:22.445 +02:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-07-03 22:02:22.446 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-03 22:02:22.446 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-03 22:02:22.446 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-03 22:02:22.446 +02:00 [DBG] Start discovery request
+2019-07-03 22:02:29.158 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:29.158 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-03 22:02:29.158 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:29.158 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-03 22:02:29.159 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-03 22:02:29.159 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-03 22:02:29.159 +02:00 [DBG] Start discovery request
+2019-07-03 22:02:29.209 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration/jwks from origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:29.209 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-03 22:02:29.209 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:29.209 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-03 22:02:29.210 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-03 22:02:29.210 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-03 22:02:29.210 +02:00 [DBG] Start key discovery request
+2019-07-03 22:02:29.253 +02:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-03 22:02:29.253 +02:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-03 22:02:29.253 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-03 22:02:29.253 +02:00 [DBG] Start authorize request
+2019-07-03 22:02:29.254 +02:00 [DBG] No user present in authorize request
+2019-07-03 22:02:29.254 +02:00 [DBG] Start authorize request protocol validation
+2019-07-03 22:02:29.254 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-03 22:02:29.254 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-03 22:02:29.254 +02:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"vp_portal","ClientName":"VP Portal","RedirectUri":"http://pets.vetplatform.local:4200","AllowedRedirectUris":["http://pets.vetplatform.local:4200","http://pets.vetplatform.local:4200/index.html","http://pets.vetplatform.local:4200/callback.html","http://pets.vetplatform.local:4200/silent.html","http://pets.vetplatform.local:4200/popup.html"],"SubjectId":"anonymous","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile vp_portal_api","State":"IpEGFbaCLQidozuGdgZdsbE44TcYQkXjiOJ36t6Q","UiLocales":null,"Nonce":"IpEGFbaCLQidozuGdgZdsbE44TcYQkXjiOJ36t6Q","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"id_token token","client_id":"vp_portal","state":"IpEGFbaCLQidozuGdgZdsbE44TcYQkXjiOJ36t6Q","redirect_uri":"http://pets.vetplatform.local:4200","scope":"openid profile vp_portal_api","nonce":"IpEGFbaCLQidozuGdgZdsbE44TcYQkXjiOJ36t6Q"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-03 22:02:29.254 +02:00 [INF] Showing login: User is not authenticated
+2019-07-03 22:02:29.272 +02:00 [DBG] Start authorize request protocol validation
+2019-07-03 22:02:29.272 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-03 22:02:29.273 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-03 22:02:29.273 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-03 22:02:37.481 +02:00 [DBG] Start authorize request protocol validation
+2019-07-03 22:02:37.481 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-03 22:02:37.481 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-03 22:02:38.183 +02:00 [DBG] Augmenting SignInContext
+2019-07-03 22:02:38.193 +02:00 [DBG] Adding idp claim with value: local
+2019-07-03 22:02:38.193 +02:00 [DBG] Adding amr claim with value: pwd
+2019-07-03 22:02:38.193 +02:00 [DBG] Adding auth_time claim with value: 1562184158
+2019-07-03 22:02:38.200 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-03 22:02:38.209 +02:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"f4045d70-ea99-4d8a-a998-56b27a189eec","DisplayName":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLNVU5C32UO9:00000003","TimeStamp":"2019-07-03T20:02:38.0000000Z","ProcessId":20044,"LocalIpAddress":"127.0.0.1:46239","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-07-03 22:02:38.211 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-03 22:02:38.300 +02:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-03 22:02:38.301 +02:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-03 22:02:38.301 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-03 22:02:38.306 +02:00 [DBG] Start authorize callback request
+2019-07-03 22:02:38.309 +02:00 [DBG] User in authorize request: f4045d70-ea99-4d8a-a998-56b27a189eec
+2019-07-03 22:02:38.309 +02:00 [DBG] Start authorize request protocol validation
+2019-07-03 22:02:38.309 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-07-03 22:02:38.309 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-03 22:02:38.309 +02:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"vp_portal","ClientName":"VP Portal","RedirectUri":"http://pets.vetplatform.local:4200","AllowedRedirectUris":["http://pets.vetplatform.local:4200","http://pets.vetplatform.local:4200/index.html","http://pets.vetplatform.local:4200/callback.html","http://pets.vetplatform.local:4200/silent.html","http://pets.vetplatform.local:4200/popup.html"],"SubjectId":"f4045d70-ea99-4d8a-a998-56b27a189eec","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile vp_portal_api","State":"IpEGFbaCLQidozuGdgZdsbE44TcYQkXjiOJ36t6Q","UiLocales":null,"Nonce":"IpEGFbaCLQidozuGdgZdsbE44TcYQkXjiOJ36t6Q","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"5aba663bc59c1f5d3b8f78e481aa9538","Raw":{"response_type":"id_token token","client_id":"vp_portal","state":"IpEGFbaCLQidozuGdgZdsbE44TcYQkXjiOJ36t6Q","redirect_uri":"http://pets.vetplatform.local:4200","scope":"openid profile vp_portal_api","nonce":"IpEGFbaCLQidozuGdgZdsbE44TcYQkXjiOJ36t6Q"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-03 22:02:38.348 +02:00 [DBG] Client is configured to not require consent, no consent is required
+2019-07-03 22:02:38.353 +02:00 [DBG] Creating Implicit Flow response.
+2019-07-03 22:02:38.361 +02:00 [DBG] Getting claims for access token for client: vp_portal
+2019-07-03 22:02:38.361 +02:00 [DBG] Getting claims for access token for subject: f4045d70-ea99-4d8a-a998-56b27a189eec
+2019-07-03 22:02:38.433 +02:00 [DBG] Getting claims for identity token for subject: f4045d70-ea99-4d8a-a998-56b27a189eec and client: vp_portal
+2019-07-03 22:02:38.433 +02:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-03 22:02:38.442 +02:00 [INF] {"ClientId":"vp_portal","ClientName":"VP Portal","RedirectUri":"http://pets.vetplatform.local:4200","Endpoint":"Authorize","SubjectId":"f4045d70-ea99-4d8a-a998-56b27a189eec","Scopes":"openid profile vp_portal_api","GrantType":"implicit","Tokens":[{"TokenType":"id_token","TokenValue":"****fp4Q","$type":"Token"},{"TokenType":"access_token","TokenValue":"****USEg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLNVU5C32UO7:00000003","TimeStamp":"2019-07-03T20:02:38.0000000Z","ProcessId":20044,"LocalIpAddress":"127.0.0.1:46239","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-03 22:02:38.443 +02:00 [INF] Authorize endpoint response
+{"SubjectId":"f4045d70-ea99-4d8a-a998-56b27a189eec","ClientId":"vp_portal","RedirectUri":"http://pets.vetplatform.local:4200","State":"IpEGFbaCLQidozuGdgZdsbE44TcYQkXjiOJ36t6Q","Scope":"openid profile vp_portal_api","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-07-03 22:02:38.456 +02:00 [DBG] Augmenting SignInContext
+2019-07-03 22:02:38.456 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-03 22:02:39.511 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:39.511 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-03 22:02:39.511 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:39.512 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-03 22:02:39.512 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-03 22:02:39.512 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-03 22:02:39.512 +02:00 [DBG] Start discovery request
+2019-07-03 22:02:39.543 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration/jwks from origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:39.543 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-07-03 22:02:39.543 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-07-03 22:02:39.544 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-03 22:02:39.544 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-03 22:02:39.544 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-03 22:02:39.544 +02:00 [DBG] Start key discovery request
+2019-07-03 22:02:43.460 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-03 22:02:43.460 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-03 22:02:43.461 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-03 22:02:43.461 +02:00 [DBG] Start discovery request
+2019-07-03 22:02:43.660 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-07-03 22:02:43.661 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-07-03 22:02:43.661 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-07-03 22:02:43.661 +02:00 [DBG] Start key discovery request
