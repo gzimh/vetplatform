@@ -30,6 +30,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VetPlatform.UI", "VetPlatfo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetPlatform.Auth", "VetPlatform.Auth\VetPlatform.Auth.csproj", "{355F44F4-A34B-44BA-9D69-7088EF4346E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetPlatform.Store", "VetPlatform.Store\VetPlatform.Store.csproj", "{C84EAEA7-3A39-45D2-A63D-BDF9BDD90342}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{355F44F4-A34B-44BA-9D69-7088EF4346E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{355F44F4-A34B-44BA-9D69-7088EF4346E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{355F44F4-A34B-44BA-9D69-7088EF4346E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84EAEA7-3A39-45D2-A63D-BDF9BDD90342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84EAEA7-3A39-45D2-A63D-BDF9BDD90342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84EAEA7-3A39-45D2-A63D-BDF9BDD90342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84EAEA7-3A39-45D2-A63D-BDF9BDD90342}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
