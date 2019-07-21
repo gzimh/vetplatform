@@ -2,12 +2,12 @@
 
 namespace VetPlatform.Data.Migrations
 {
-    public partial class added_theme_property_tenant_tbl : Migration
+    public partial class added_logo : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "Theme",
+                name: "Logo",
                 table: "Tenants",
                 nullable: true);
         }
@@ -15,7 +15,7 @@ namespace VetPlatform.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Theme",
+                name: "Logo",
                 table: "Tenants");
         }
     }

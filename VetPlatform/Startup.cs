@@ -33,19 +33,18 @@ namespace VetPlatform.Api
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            var connection = Configuration.GetConnectionString("DefaultConnectionString");
+            var adminConnectionString = Configuration.GetConnectionString("AdminConnectionString");
+            var vetplatformConnectionString = Configuration.GetConnectionString("VetPlatformConnectionString");
 
             services.AddDbContext<TenantContext>
-                (options => options.UseSqlServer(connection));
+                (options => options.UseSqlServer(adminConnectionString));
 
             services.AddTransient<ITenantProvider, TenantProvider>();
 
             services.AddDbContext<VetPlatformContext>
-                (options => options.UseSqlServer(connection));
+                (options => options.UseSqlServer(vetplatformConnectionString));
 
             services.AddTransient<IBookingsService, BookingsService>();
-
-            services.AddTransient<ITenantService, TenantService>();
 
             services.AddCors(options =>
             {

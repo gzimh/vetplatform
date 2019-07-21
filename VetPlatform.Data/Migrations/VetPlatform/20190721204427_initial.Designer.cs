@@ -10,8 +10,8 @@ using VetPlatform.Data;
 namespace VetPlatform.Data.Migrations.VetPlatform
 {
     [DbContext(typeof(VetPlatformContext))]
-    [Migration("20190413224719_initial_create_vp")]
-    partial class initial_create_vp
+    [Migration("20190721204427_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,6 +28,8 @@ namespace VetPlatform.Data.Migrations.VetPlatform
 
                     b.Property<DateTime>("Schedule");
 
+                    b.Property<string>("Status");
+
                     b.Property<Guid>("TenantId");
 
                     b.HasKey("Id");
@@ -37,15 +39,15 @@ namespace VetPlatform.Data.Migrations.VetPlatform
                     b.HasData(
                         new
                         {
-                            Id = new Guid("789c6fde-5928-4272-bb40-2ef19dc3443a"),
+                            Id = new Guid("1b0c3500-3a46-4655-9b87-2c37ec110b12"),
                             Schedule = new DateTime(2019, 4, 20, 8, 0, 0, 0, DateTimeKind.Unspecified),
                             TenantId = new Guid("37ef41bd-b7ed-4fa2-bef8-916b03b1e174")
                         },
                         new
                         {
-                            Id = new Guid("8a2402c3-fb29-4a72-9435-4b07794694e5"),
+                            Id = new Guid("d2fa32c6-a26f-4dd1-80e1-3d3947c8514a"),
                             Schedule = new DateTime(2019, 4, 20, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            TenantId = new Guid("85029b8d-86f1-4c81-befc-a832819ad557")
+                            TenantId = new Guid("37ef41bd-b7ed-4fa2-bef8-916b03b1e174")
                         });
                 });
 #pragma warning restore 612, 618

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using VetPlatform.Api.Models;
 using VetPlatform.Data.Models;
+using VetPlatform.Store.Models;
 
-namespace VetPlatform.Api.Services
+namespace VetPlatform.Store.Services
 {
     public interface ITenantService
     {
-        Tenant AddTenant(TenantRequestModel requestModel);
+        Task<Tenant> AddTenant(TenantRequestModel requestModel);
     }
 }

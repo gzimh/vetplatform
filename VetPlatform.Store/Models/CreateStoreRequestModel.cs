@@ -9,12 +9,6 @@ namespace VetPlatform.Store.Models
 {
     public class CreateStoreRequestModel
     {
-        [Required]
-        public string Name { get; set; }
-        [Required]
-        public string Domain { get; set; }
-        public IFormFile Logo { get; set; }
-        [Required]
-        public string Theme { get; set; }
+        public TenantRequestModel Tenant { get; set; }
     }
 }

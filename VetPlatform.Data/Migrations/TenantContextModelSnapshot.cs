@@ -26,6 +26,8 @@ namespace VetPlatform.Data.Migrations
 
                     b.Property<string>("HostName");
 
+                    b.Property<string>("Logo");
+
                     b.Property<string>("Name");
 
                     b.Property<string>("Theme");

@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VetPlatform.Data;
 
-namespace VetPlatform.Data.Migrations.VetPlatform
+namespace VetPlatform.Data.Migrations
 {
-    [DbContext(typeof(VetPlatformContext))]
-    [Migration("20190505211248_Bookings_Add_Status_Col")]
-    partial class Bookings_Add_Status_Col
+    [DbContext(typeof(TenantContext))]
+    [Migration("20190721204334_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,33 +21,39 @@ namespace VetPlatform.Data.Migrations.VetPlatform
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("VetPlatform.Data.Models.Booking", b =>
+            modelBuilder.Entity("VetPlatform.Data.Models.Tenant", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("Schedule");
+                    b.Property<string>("HostName");
 
-                    b.Property<string>("Status");
+                    b.Property<string>("Name");
 
-                    b.Property<Guid>("TenantId");
+                    b.Property<string>("Theme");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Bookings");
+                    b.ToTable("Tenants");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("e7e00907-9e9d-4eaf-ba8e-76f0057240db"),
-                            Schedule = new DateTime(2019, 4, 20, 8, 0, 0, 0, DateTimeKind.Unspecified),
-                            TenantId = new Guid("37ef41bd-b7ed-4fa2-bef8-916b03b1e174")
+                            Id = new Guid("37ef41bd-b7ed-4fa2-bef8-916b03b1e174"),
+                            HostName = "pets.vetplatform.local",
+                            Name = "Pets Clinic"
                         },
                         new
                         {
-                            Id = new Guid("430c6f82-f06a-46de-9c2f-2dfd13bf4acd"),
-                            Schedule = new DateTime(2019, 4, 20, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            TenantId = new Guid("85029b8d-86f1-4c81-befc-a832819ad557")
+                            Id = new Guid("85029b8d-86f1-4c81-befc-a832819ad557"),
+                            HostName = "meds.vetplatform.local",
+                            Name = "Meds Clinic"
+                        },
+                        new
+                        {
+                            Id = new Guid("fe0024a5-5d18-4b2e-b2eb-59a0f42d1861"),
+                            HostName = "localhost",
+                            Name = "Dev"
                         });
                 });
 #pragma warning restore 612, 618

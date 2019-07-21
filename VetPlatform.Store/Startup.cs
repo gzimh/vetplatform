@@ -7,8 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using VetPlatform.Data;
+using VetPlatform.Store.Services;
 
 namespace VetPlatform.Store
 {
@@ -31,6 +34,11 @@ namespace VetPlatform.Store
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            var adminConnectionString = Configuration.GetConnectionString("AdminConnectionString");
+            services.AddDbContext<TenantContext>
+             (options => options.UseSqlServer(adminConnectionString));
+
+            services.AddTransient<ITenantService, TenantService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

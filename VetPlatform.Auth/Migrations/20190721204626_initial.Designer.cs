@@ -10,8 +10,8 @@ using VetPlatform.Auth.Data;
 namespace VetPlatform.Auth.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190626214129_Initial")]
-    partial class Initial
+    [Migration("20190721204626_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

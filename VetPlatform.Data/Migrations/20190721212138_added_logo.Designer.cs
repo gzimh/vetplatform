@@ -10,8 +10,8 @@ using VetPlatform.Data;
 namespace VetPlatform.Data.Migrations
 {
     [DbContext(typeof(TenantContext))]
-    [Migration("20190701205953_added_theme_property_tenant_tbl")]
-    partial class added_theme_property_tenant_tbl
+    [Migration("20190721212138_added_logo")]
+    partial class added_logo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,8 @@ namespace VetPlatform.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("HostName");
+
+                    b.Property<string>("Logo");
 
                     b.Property<string>("Name");
 
