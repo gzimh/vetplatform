@@ -5,23 +5,64 @@
 }
 
 <h3>Create your own Store</h3>
-<br />
+
 <form method="post" enctype="multipart/form-data">
-    <small id="emailHelp" class="form-text text-muted">User information</small>
+    <!--User information-->
+    <small class="form-text text-muted">User information</small>
     <hr />
-    <div class="form-group">
-        <label asp-for="Store.Tenant.Name">Name</label>
-        <input type="text" class="form-control" placeholder="Store Name" asp-for="Store.Tenant.Name">
-    </div>
-    <div class="form-group">
-        <label asp-for="Store.Tenant.Domain">Domain</label>
-        <div class="input-group mb-2">
-            <input type="text" class="form-control" placeholder="Store Domain" asp-for="Store.Tenant.Domain">
-            <div class="input-group-append">
-                <div class="input-group-text">.vetplatform.com</div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Store.User.Name">Name</label>
+                <input type="text" class="form-control" placeholder="Full Name" asp-for="Store.User.Name">
             </div>
         </div>
-        <small class="form-text text-muted">ex. mystore.vetplatform.com</small>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Store.User.Email">Email</label>
+                <input type="email" class="form-control" placeholder="Email address" asp-for="Store.User.Email">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Store.User.Password">Password</label>
+                <input type="password" class="form-control" placeholder="Password" asp-for="Store.User.Password">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Store.User.ConfirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="Confirm Password" asp-for="Store.User.ConfirmPassword">
+            </div>
+        </div>
+    </div>
+    <br />
+
+
+    <!--Store information-->
+    <small class="form-text text-muted">Store information</small>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Store.Tenant.Name">Store Name</label>
+                <input type="text" class="form-control" placeholder="Store Name" asp-for="Store.Tenant.Name">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Store.Tenant.Domain">Domain</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" placeholder="Store Domain" asp-for="Store.Tenant.Domain">
+                    <div class="input-group-append">
+                        <div class="input-group-text">.vetplatform.com</div>
+                    </div>
+                </div>
+                <small class="form-text text-muted">ex. mystore.vetplatform.com</small>
+            </div>
+        </div>
     </div>
     <div class="form-group">
         <label asp-for="Store.Tenant.Logo">Logo</label>
@@ -30,10 +71,16 @@
             <label class="custom-file-label" asp-for="Store.Tenant.Logo">Choose file</label>
         </div>
     </div>
+    <br />
     <div class="form-group">
         <label asp-for="Store.Tenant.Theme">Theme Color &nbsp;</label>
-       <input type="color" asp-for="Store.Tenant.Theme"/>
+        <input type="color" asp-for="Store.Tenant.Theme" />
     </div>
     <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn">Cancel</button>
+        </div>
+    </div>
 </form>

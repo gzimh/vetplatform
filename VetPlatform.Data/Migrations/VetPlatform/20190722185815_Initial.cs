@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace VetPlatform.Data.Migrations.VetPlatform
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,12 +24,12 @@ namespace VetPlatform.Data.Migrations.VetPlatform
             migrationBuilder.InsertData(
                 table: "Bookings",
                 columns: new[] { "Id", "Schedule", "Status", "TenantId" },
-                values: new object[] { new Guid("1b0c3500-3a46-4655-9b87-2c37ec110b12"), new DateTime(2019, 4, 20, 8, 0, 0, 0, DateTimeKind.Unspecified), null, new Guid("37ef41bd-b7ed-4fa2-bef8-916b03b1e174") });
+                values: new object[] { new Guid("19458668-177c-4ca8-9acb-6cd2da85903f"), new DateTime(2019, 4, 20, 8, 0, 0, 0, DateTimeKind.Unspecified), null, new Guid("37ef41bd-b7ed-4fa2-bef8-916b03b1e174") });
 
             migrationBuilder.InsertData(
                 table: "Bookings",
                 columns: new[] { "Id", "Schedule", "Status", "TenantId" },
-                values: new object[] { new Guid("d2fa32c6-a26f-4dd1-80e1-3d3947c8514a"), new DateTime(2019, 4, 20, 9, 0, 0, 0, DateTimeKind.Unspecified), null, new Guid("37ef41bd-b7ed-4fa2-bef8-916b03b1e174") });
+                values: new object[] { new Guid("5d1f7f02-c4e8-40c5-acff-2f9fc76868fc"), new DateTime(2019, 4, 20, 9, 0, 0, 0, DateTimeKind.Unspecified), null, new Guid("37ef41bd-b7ed-4fa2-bef8-916b03b1e174") });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -1,22 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace VetPlatform.Data.Migrations
+namespace VetPlatform.Data.Migrations.Identity
 {
-    public partial class added_logo : Migration
+    public partial class Add_Name : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "Logo",
-                table: "Tenants",
+                name: "FullName",
+                table: "AspNetUsers",
                 nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Logo",
-                table: "Tenants");
+                name: "FullName",
+                table: "AspNetUsers");
         }
     }
 }

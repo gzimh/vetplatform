@@ -10,5 +10,6 @@ namespace VetPlatform.Store.Models
     public class CreateStoreRequestModel
     {
         public TenantRequestModel Tenant { get; set; }
+        public UserRequestModel User { get; set; }
     }
 }

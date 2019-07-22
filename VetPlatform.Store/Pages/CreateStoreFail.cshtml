@@ -1,0 +1,11 @@
+﻿@page
+@model VetPlatform.Store.Pages.CreateStoreFailModel
+@{
+    ViewData["Title"] = "CreateStoreFail";
+}
+
+<h1 class="text-danger">Oops, something bad happend...</h1>
+<h3>Error: @ViewData["error"]</h3>
+<br />
+<p>Please <a asp-page="CreateStore">try again</a>, or contact us: support@velplatform.com</p>
+

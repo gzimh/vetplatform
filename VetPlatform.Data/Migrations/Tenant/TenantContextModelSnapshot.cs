@@ -3,17 +3,15 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VetPlatform.Data;
 
-namespace VetPlatform.Data.Migrations
+namespace VetPlatform.Data.Migrations.Tenant
 {
     [DbContext(typeof(TenantContext))]
-    [Migration("20190721204334_initial")]
-    partial class initial
+    partial class TenantContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,6 +25,8 @@ namespace VetPlatform.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("HostName");
+
+                    b.Property<string>("Logo");
 
                     b.Property<string>("Name");
 

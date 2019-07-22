@@ -12,10 +12,12 @@ namespace VetPlatform.Store.Pages
     public class CreateStoreModel : PageModel
     {
         private ITenantService _tenantService;
+        private IUserService _userService;
 
-        public CreateStoreModel(ITenantService tenantService)
+        public CreateStoreModel(ITenantService tenantService, IUserService userService)
         {
             _tenantService = tenantService;
+            _userService = userService;
         }
 
         [BindProperty]
@@ -32,9 +34,23 @@ namespace VetPlatform.Store.Pages
                 return Page();
             }
 
-            await _tenantService.AddTenant(Store.Tenant);
+            var addTenantResult = await _tenantService.AddTenant(Store.Tenant);
+            if (addTenantResult.Success && addTenantResult.Tenant != null)
+            {
+                var registerAccountResult = await _userService.RegisterAccount(addTenantResult.Tenant.Id, Store.User);
 
-            return RedirectToPage("/Index");
+                if (!registerAccountResult.Success)
+                {
+                    await _tenantService.DeleteTenant(addTenantResult.Tenant);
+                    return RedirectToPage("/CreateStoreFail", new { error = registerAccountResult.Error });
+                }
+            }
+            else
+            {
+                return RedirectToPage("/CreateStoreFail", new { error = addTenantResult.Error });
+            }
+            
+            return RedirectToPage("/CreateStoreSuccess");
         }
     }
 }

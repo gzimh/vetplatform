@@ -21,8 +21,10 @@ namespace VetPlatform.Store.Services
             _context = context;
             _environment = environment;
         }
-        public async Task<Tenant> AddTenant(TenantRequestModel requestModel)
+        public async Task<AddTenantResultModel> AddTenant(TenantRequestModel requestModel)
         {
+            var result = new AddTenantResultModel();
+
             var tenant = new Tenant()
             {
                 Name = requestModel.Name,
@@ -30,16 +32,32 @@ namespace VetPlatform.Store.Services
                 Theme = requestModel.Theme
             };
 
-            await _context.Tenants.AddAsync(tenant);
+            try
+            {
+                await _context.Tenants.AddAsync(tenant);
+                await _context.SaveChangesAsync();
+
+                var logo = await AddLogo(tenant.Id, requestModel.Logo);
+                tenant.Logo = logo;
+
+                _context.Tenants.Update(tenant);
+                await _context.SaveChangesAsync();
+
+                result.Success = true;
+                result.Tenant = tenant;
+            }
+            catch (Exception ex) {
+                result.Success = false;
+                result.Error = $"Unhandled expection: {ex.Message}";
+            }
+          
+            return result;
+        }
+
+        public async Task DeleteTenant(Tenant tenant)
+        {
+            _context.Tenants.Remove(tenant);
             await _context.SaveChangesAsync();
-
-            var logo = await AddLogo(tenant.Id, requestModel.Logo);
-            tenant.Logo = logo;
-
-            _context.Tenants.Update(tenant);
-            await _context.SaveChangesAsync();
-
-            return tenant;
         }
 
         private async Task<string> AddLogo(Guid tenantId, IFormFile file)
