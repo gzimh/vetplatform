@@ -93,3 +93,14 @@
         </div>
     </div>
 </form>
+
+
+@section scripts {
+    <script>
+        // The following code shows the name of the file selected
+        $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+}
