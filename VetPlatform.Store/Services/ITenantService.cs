@@ -9,6 +9,7 @@ namespace VetPlatform.Store.Services
 {
     public interface ITenantService
     {
+        Task<bool> TenantExists(string domain);
         Task<AddTenantResultModel> AddTenant(TenantRequestModel requestModel);
         Task DeleteTenant(Tenant tenant);
     }

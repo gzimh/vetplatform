@@ -8,6 +8,7 @@ namespace VetPlatform.Store.Services
 {
     public interface IUserService
     {
+        Task<bool> UserExists(string email);
         Task<RegisterAccountResultModel> RegisterAccount(Guid tenantId, UserRequestModel model);
     }
 }

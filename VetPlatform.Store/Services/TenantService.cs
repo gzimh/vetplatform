@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,6 +22,13 @@ namespace VetPlatform.Store.Services
             _context = context;
             _environment = environment;
         }
+
+        public async Task<bool> TenantExists(string domain)
+        {
+            var existingTenant = await _context.Tenants.FirstOrDefaultAsync(p => p.HostName == domain);
+            return existingTenant != null;
+        }
+
         public async Task<AddTenantResultModel> AddTenant(TenantRequestModel requestModel)
         {
             var result = new AddTenantResultModel();
@@ -59,6 +67,7 @@ namespace VetPlatform.Store.Services
             _context.Tenants.Remove(tenant);
             await _context.SaveChangesAsync();
         }
+
 
         private async Task<string> AddLogo(Guid tenantId, IFormFile file)
         {

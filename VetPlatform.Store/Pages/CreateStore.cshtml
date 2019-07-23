@@ -7,6 +7,7 @@
 <h3>Create your own Store</h3>
 
 <form method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <!--User information-->
     <small class="form-text text-muted">User information</small>
     <hr />
@@ -15,12 +16,14 @@
             <div class="form-group">
                 <label asp-for="Store.User.Name">Name</label>
                 <input type="text" class="form-control" placeholder="Full Name" asp-for="Store.User.Name">
+                <span asp-validation-for="Store.User.Name" class="text-danger"></span>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="Store.User.Email">Email</label>
                 <input type="email" class="form-control" placeholder="Email address" asp-for="Store.User.Email">
+                <span asp-validation-for="Store.User.Email" class="text-danger"></span>
             </div>
         </div>
     </div>
@@ -29,12 +32,14 @@
             <div class="form-group">
                 <label asp-for="Store.User.Password">Password</label>
                 <input type="password" class="form-control" placeholder="Password" asp-for="Store.User.Password">
+                <span asp-validation-for="Store.User.Password" class="text-danger"></span>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="Store.User.ConfirmPassword">Confirm Password</label>
                 <input type="password" class="form-control" placeholder="Confirm Password" asp-for="Store.User.ConfirmPassword">
+                <span asp-validation-for="Store.User.ConfirmPassword" class="text-danger"></span>
             </div>
         </div>
     </div>
@@ -49,6 +54,7 @@
             <div class="form-group">
                 <label asp-for="Store.Tenant.Name">Store Name</label>
                 <input type="text" class="form-control" placeholder="Store Name" asp-for="Store.Tenant.Name">
+                <span asp-validation-for="Store.Tenant.Name" class="text-danger"></span>
             </div>
         </div>
         <div class="col-md-6">
@@ -61,6 +67,7 @@
                     </div>
                 </div>
                 <small class="form-text text-muted">ex. mystore.vetplatform.com</small>
+                <span asp-validation-for="Store.Tenant.Domain" class="text-danger"></span>
             </div>
         </div>
     </div>
@@ -69,12 +76,14 @@
         <div class="custom-file">
             <input type="file" class="custom-file-input" asp-for="Store.Tenant.Logo">
             <label class="custom-file-label" asp-for="Store.Tenant.Logo">Choose file</label>
+            <span asp-validation-for="Store.Tenant.Logo" class="text-danger"></span>
         </div>
     </div>
     <br />
     <div class="form-group">
         <label asp-for="Store.Tenant.Theme">Theme Color &nbsp;</label>
         <input type="color" asp-for="Store.Tenant.Theme" />
+        <span asp-validation-for="Store.Tenant.Theme" class="text-danger"></span>
     </div>
     <br />
     <div class="row">

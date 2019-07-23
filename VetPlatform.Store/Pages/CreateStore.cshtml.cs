@@ -34,6 +34,22 @@ namespace VetPlatform.Store.Pages
                 return Page();
             }
 
+            PrepareDomainName();
+
+            var tenantExists = await _tenantService.TenantExists(Store.Tenant.Domain);
+            if (tenantExists)
+            {
+                ModelState.AddModelError("Store.Tenant.Domain", $"Store with domain: {Store.Tenant.Domain} already exists.");
+                return Page();
+            }
+
+            var userExists = await _userService.UserExists(Store.User.Email);
+            if (userExists)
+            {
+                ModelState.AddModelError("Store.User.Email", $"User with email: {Store.User.Email} already exists.");
+                return Page();
+            }
+
             var addTenantResult = await _tenantService.AddTenant(Store.Tenant);
             if (addTenantResult.Success && addTenantResult.Tenant != null)
             {
@@ -51,6 +67,15 @@ namespace VetPlatform.Store.Pages
             }
             
             return RedirectToPage("/CreateStoreSuccess");
+        }
+
+        private void PrepareDomainName()
+        {
+            Store.Tenant.Domain = Store.Tenant.Domain.ToLower();
+            if (!Store.Tenant.Domain.EndsWith(".vetplatform.com"))
+            {
+                Store.Tenant.Domain += ".vetplatform.com";
+            }
         }
     }
 }
