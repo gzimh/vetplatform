@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using VetPlatform.Data.Models;
+using VetPlatform.Data.Options;
 
 namespace VetPlatform.Data
 {
@@ -35,13 +36,15 @@ namespace VetPlatform.Data
             {
                 Id = Guid.NewGuid(),
                 TenantId = _randomTenantId,
-                Schedule = new DateTime(2019, 4, 20, 08, 00, 00)
+                Schedule = new DateTime(2019, 4, 20, 08, 00, 00),
+                Status = BookingsStatusOptions.Done
             },
             new Booking
             {
                 Id = Guid.NewGuid(),
                 TenantId = _randomTenantId,
-                Schedule = new DateTime(2019, 4, 20, 09, 00, 00)
+                Schedule = new DateTime(2019, 4, 20, 09, 00, 00),
+                Status = BookingsStatusOptions.Pending
             }
         };
     }

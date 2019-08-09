@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace VetPlatform.Api.Models
+namespace VetPlatform.Data.Options
 {
-    public static class BookingsStatus
+    public static class BookingsStatusOptions
     {
         public static string Pending => nameof(Pending);
         public static string Done => nameof(Done);
