@@ -25,7 +25,7 @@ namespace VetPlatform.Auth
             if (seed)
             {
                 var config = host.Services.GetRequiredService<IConfiguration>();
-                var connectionString = config.GetConnectionString("DefaultConnectionString");
+                var connectionString = config.GetConnectionString("AdminConnectionString");
                 SeedData.EnsureSeedData(connectionString);
             }
 

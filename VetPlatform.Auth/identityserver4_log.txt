@@ -6454,3 +6454,76 @@ Error Number:208,State:1,Class:16
 2019-08-09 23:37:06.757 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
 2019-08-09 23:37:06.757 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
 2019-08-09 23:37:06.763 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:39:56.869 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-09 23:39:56.931 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-08-09 23:39:56.938 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-08-09 23:39:56.938 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-08-09 23:39:56.938 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-08-09 23:39:56.939 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-08-09 23:39:56.939 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-08-09 23:39:57.581 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:4200
+2019-08-09 23:39:57.595 +02:00 [DBG] Client list checked and origin: http://localhost:4200 is not allowed
+2019-08-09 23:39:57.595 +02:00 [WRN] CorsPolicyService did not allow origin: http://localhost:4200
+2019-08-09 23:39:57.638 +02:00 [DBG] Login Url: /Account/Login
+2019-08-09 23:39:57.638 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-08-09 23:39:57.638 +02:00 [DBG] Logout Url: /Account/Logout
+2019-08-09 23:39:57.638 +02:00 [DBG] ConsentUrl Url: /consent
+2019-08-09 23:39:57.638 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-08-09 23:39:57.638 +02:00 [DBG] Error Url: /home/error
+2019-08-09 23:39:57.638 +02:00 [DBG] Error Id Parameter: errorId
+2019-08-09 23:39:57.677 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-08-09 23:39:57.806 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-08-09 23:39:57.806 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-08-09 23:39:57.814 +02:00 [DBG] Start discovery request
+2019-08-09 23:40:28.852 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://pets.vetplatform.local:4200
+2019-08-09 23:40:28.852 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-08-09 23:40:28.852 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-08-09 23:40:28.860 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-08-09 23:40:28.861 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-08-09 23:40:28.861 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-08-09 23:40:28.861 +02:00 [DBG] Start discovery request
+2019-08-09 23:40:29.019 +02:00 [DBG] CORS request made for path: /.well-known/openid-configuration/jwks from origin: http://pets.vetplatform.local:4200
+2019-08-09 23:40:29.019 +02:00 [DBG] Client list checked and origin: http://pets.vetplatform.local:4200 is allowed
+2019-08-09 23:40:29.019 +02:00 [DBG] CorsPolicyService allowed origin: http://pets.vetplatform.local:4200
+2019-08-09 23:40:29.020 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-08-09 23:40:29.021 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-08-09 23:40:29.021 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-08-09 23:40:29.030 +02:00 [DBG] Start key discovery request
+2019-08-09 23:40:29.103 +02:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-08-09 23:40:29.112 +02:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-08-09 23:40:29.112 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-08-09 23:40:29.120 +02:00 [DBG] Start authorize request
+2019-08-09 23:40:29.137 +02:00 [DBG] No user present in authorize request
+2019-08-09 23:40:29.150 +02:00 [DBG] Start authorize request protocol validation
+2019-08-09 23:40:29.186 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:40:29.267 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-08-09 23:40:29.294 +02:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"vp_portal","ClientName":"VP Portal","RedirectUri":"http://pets.vetplatform.local:4200","AllowedRedirectUris":["http://pets.vetplatform.local:4200","http://pets.vetplatform.local:4200/index.html","http://pets.vetplatform.local:4200/callback.html","http://pets.vetplatform.local:4200/silent.html","http://pets.vetplatform.local:4200/popup.html"],"SubjectId":"anonymous","ResponseType":"id_token token","ResponseMode":"fragment","GrantType":"implicit","RequestedScopes":"openid profile vp_portal_api","State":"wxIpqrfY8nec3RsyIlhhNMrYsdGU1fbO4gVsJDPK","UiLocales":null,"Nonce":"wxIpqrfY8nec3RsyIlhhNMrYsdGU1fbO4gVsJDPK","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"id_token token","client_id":"vp_portal","state":"wxIpqrfY8nec3RsyIlhhNMrYsdGU1fbO4gVsJDPK","redirect_uri":"http://pets.vetplatform.local:4200","scope":"openid profile vp_portal_api","nonce":"wxIpqrfY8nec3RsyIlhhNMrYsdGU1fbO4gVsJDPK"},"$type":"AuthorizeRequestValidationLog"}
+2019-08-09 23:40:29.328 +02:00 [INF] Showing login: User is not authenticated
+2019-08-09 23:40:29.689 +02:00 [DBG] Start authorize request protocol validation
+2019-08-09 23:40:29.691 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:40:29.692 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-08-09 23:40:29.699 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:40:31.833 +02:00 [DBG] Start authorize request protocol validation
+2019-08-09 23:40:31.834 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:40:31.835 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-08-09 23:40:32.582 +02:00 [INF] {"Username":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLOT28FQ4L64:00000002","TimeStamp":"2019-08-09T21:40:32.0000000Z","ProcessId":5216,"LocalIpAddress":"127.0.0.1:30814","RemoteIpAddress":"127.0.0.1","$type":"UserLoginFailureEvent"}
+2019-08-09 23:40:32.588 +02:00 [DBG] Start authorize request protocol validation
+2019-08-09 23:40:32.588 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:40:32.590 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-08-09 23:40:32.591 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:40:39.897 +02:00 [DBG] Start authorize request protocol validation
+2019-08-09 23:40:39.897 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:40:39.897 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-08-09 23:40:39.911 +02:00 [INF] {"Username":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLOT28FQ4L61:00000002","TimeStamp":"2019-08-09T21:40:39.0000000Z","ProcessId":5216,"LocalIpAddress":"127.0.0.1:30814","RemoteIpAddress":"127.0.0.1","$type":"UserLoginFailureEvent"}
+2019-08-09 23:40:39.911 +02:00 [DBG] Start authorize request protocol validation
+2019-08-09 23:40:39.912 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:40:39.912 +02:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-08-09 23:40:39.912 +02:00 [DBG] client configuration validation for client vp_portal succeeded.
+2019-08-09 23:44:09.383 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-08-09 23:44:09.422 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-08-09 23:44:09.427 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-08-09 23:44:09.427 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-08-09 23:44:09.427 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-08-09 23:44:09.427 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-08-09 23:44:09.427 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
