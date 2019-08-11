@@ -71,7 +71,7 @@ namespace VetPlatform.Store.Services
 
         private async Task<string> AddLogo(Guid tenantId, IFormFile file)
         {
-            var directory = Path.Combine(_environment.WebRootPath, "img", tenantId.ToString());
+            var directory = Path.Combine(_environment.WebRootPath, "img", "uploads", tenantId.ToString());
 
             if (!Directory.Exists(directory))
             {
