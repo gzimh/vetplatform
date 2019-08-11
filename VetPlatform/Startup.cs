@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using VetPlatform.Api.Services;
 using VetPlatform.Data;
 using VetPlatform.Data.Providers;
@@ -44,7 +38,15 @@ namespace VetPlatform.Api
             services.AddDbContext<VetPlatformContext>
                 (options => options.UseSqlServer(vetplatformConnectionString));
 
+            services.AddDbContext<IdentityContext>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("AdminConnectionString")));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+              .AddEntityFrameworkStores<IdentityContext>()
+              .AddDefaultTokenProviders();
+
             services.AddTransient<IBookingsService, BookingsService>();
+            services.AddTransient<IRegisterService, RegisterService>();
 
             services.AddCors(options =>
             {
@@ -62,7 +64,11 @@ namespace VetPlatform.Api
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            services.AddAuthentication(o => {
+                o.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
             .AddJwtBearer(options =>
             {
                 // base-address of your identityserver
