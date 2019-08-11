@@ -15,6 +15,8 @@ namespace VetPlatform.Auth
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResource("role", new[] { "role" }),
+                new IdentityResource("tenantId", new[] { "tenantId" }),
             };
         }
 
@@ -22,13 +24,17 @@ namespace VetPlatform.Auth
         {
             return new ApiResource[]
             {
-                new ApiResource("vp_portal_api", "VP Portal API"),
+                new ApiResource("vp_portal_api", "VP Portal API", new [] { "role", "tenantId"}),
                 new ApiResource("vp_store_api", "VP Store API")
             };
         }
 
         public static IEnumerable<Client> GetClients()
         {
+            var pets = "http://pets.vetplatform.local:4200";
+            var meds = "http://meds.vetplatform.local:4201";
+            var mystore = "http://mystore.vetplatform.local:4202";
+
             return new[]
             {
                 // SPA client using implicit flow
@@ -41,19 +47,11 @@ namespace VetPlatform.Auth
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
 
-                    RedirectUris =
-                    {
-                        "http://pets.vetplatform.local:4200",
-                        "http://pets.vetplatform.local:4200/index.html",
-                        "http://pets.vetplatform.local:4200/callback.html",
-                        "http://pets.vetplatform.local:4200/silent.html",
-                        "http://pets.vetplatform.local:4200/popup.html",
-                    },
+                    RedirectUris = { pets, meds, mystore},
+                    PostLogoutRedirectUris = { pets, meds, mystore },
+                    AllowedCorsOrigins = { pets, meds, mystore },
 
-                    PostLogoutRedirectUris = { "http://pets.vetplatform.local:4200" },
-                    AllowedCorsOrigins = { "http://pets.vetplatform.local:4200" },
-
-                    AllowedScopes = { "openid", "profile", "vp_portal_api" },
+                    AllowedScopes = { "openid", "profile", "vp_portal_api", "role", "tenantId" },
 
                     RequireConsent = false
                 }

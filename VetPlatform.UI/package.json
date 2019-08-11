@@ -5,6 +5,7 @@
     "ng": "ng",
     "start:pets": "ng serve --host pets.vetplatform.local --port 4200 --open",
     "start:meds": "ng serve --host meds.vetplatform.local --port 4201 --open",
+    "start:mystore": "ng serve --host mystore.vetplatform.local --port 4202 --open",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

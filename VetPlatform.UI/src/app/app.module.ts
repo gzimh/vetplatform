@@ -6,25 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './layout/header/header.component';
-import { BookingsComponent } from './bookings/bookings.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { CustomDatePickerComponent } from './custom-date-picker/custom-date-picker.component';
-import { FormsModule } from '@angular/forms';
-import { BookingItemComponent } from './bookings/booking-item/booking-item.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChangeStatusComponent } from './bookings/change-status/change-status.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { AuthService } from './shared/auth.service';
 import { AuthInterceptor } from './shared/auth.interceptor';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BookingsComponent,
-    CustomDatePickerComponent,
-    BookingItemComponent,
-    ChangeStatusComponent
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +30,10 @@ import { AuthInterceptor } from './shared/auth.interceptor';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    AdminModule
   ],
   providers: [AuthService, {
     provide: HTTP_INTERCEPTORS,

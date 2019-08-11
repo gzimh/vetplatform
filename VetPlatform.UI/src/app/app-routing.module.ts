@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookingsComponent } from './bookings/bookings.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'bookings',
-    pathMatch:'full'
+    component: HomeComponent
   },
   {
-    path: 'bookings',
-    component: BookingsComponent
+    path:'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'admin',
+   loadChildren: './admin/admin.module#AdminModule'
   }
 ];
 

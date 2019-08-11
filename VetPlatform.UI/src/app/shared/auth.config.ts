@@ -12,6 +12,5 @@ export const authConfig: AuthConfig = {
   clientId: 'vp_portal',
 
   // set the scope for the permissions the client should request
-  // The first three are defined by OIDC. The 4th is a usecase-specific one
-  scope: 'openid profile vp_portal_api',
+  scope: 'openid profile vp_portal_api role tenantId',
 }
