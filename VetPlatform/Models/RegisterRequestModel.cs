@@ -8,6 +8,11 @@ namespace VetPlatform.Api.Models
 {
     public class RegisterRequestModel
     {
+        public RegisterRequestModel()
+        {
+            TenantId = Guid.NewGuid().ToString();
+        }
+
         [Required]
         public string Name { get; set; }
         [Required]
