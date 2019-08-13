@@ -15,6 +15,9 @@ import { AuthInterceptor } from './shared/auth.interceptor';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminModule } from './admin/admin.module';
+import { AppService } from './services/app.service';
+import { BookNowComponent } from './book-now/book-now.component';
+import { AuthGuardService } from './shared/auth.guard';
 
 
 @NgModule({
@@ -22,7 +25,8 @@ import { AdminModule } from './admin/admin.module';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    BookNowComponent
   ],
   imports: [
     BrowserModule,
@@ -35,11 +39,15 @@ import { AdminModule } from './admin/admin.module';
     OAuthModule.forRoot(),
     AdminModule
   ],
-  providers: [AuthService, {
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi: true
-  }],
+  providers: [
+    AppService,
+    AuthService,
+    AuthGuardService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent],
   entryComponents: [ChangeStatusComponent]
 })

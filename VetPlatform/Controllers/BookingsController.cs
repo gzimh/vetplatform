@@ -9,7 +9,7 @@ using VetPlatform.Api.Services;
 
 namespace VetPlatform.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BookingsController : ControllerBase
@@ -62,6 +62,28 @@ namespace VetPlatform.Api.Controllers
                 if (ex is BookingException) return BadRequest (ex.Message);
                 return StatusCode(500);
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> BookNow([FromBody] BookNowRequestModel model)
+        {
+
+            return Ok();
+        }
+
+        [HttpGet("schedule")]
+        public async Task<IActionResult> GetAvailableSchedules([FromQuery] DateTime date)
+        {
+            try
+            {
+                var schedule = await _bookingsService.GetAvailableSchedules(date);
+                return Ok(schedule);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+           
         }
     }
 }

@@ -10,5 +10,7 @@ namespace VetPlatform.Data.Models
         public Guid TenantId { get; set; }
         public DateTime Schedule { get; set; }
         public string Status { get; set; }
+        public string Reason { get; set; }
+        public string UserId { get; set; }
     }
 }

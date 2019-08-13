@@ -11,6 +11,7 @@ namespace VetPlatform.Api.Services
     {
         Task<BookingsResponseModel> GetBookings(BookingsRequestModel requestModel);
         Task<Booking> ChangeBookingStatus(ChangeStatusRequestModel requestModel);
+        Task<List<ScheduleOption>> GetAvailableSchedules(DateTime date);
         bool IsValidStatus(string status);
     }
 }

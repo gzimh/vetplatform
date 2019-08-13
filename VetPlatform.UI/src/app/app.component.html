@@ -1,5 +1,5 @@
-<ng-container *ngIf="!loading">
-    <app-header></app-header>
+<ng-container *ngIf="!loading && appInfo">
+    <app-header [name]="appInfo.name" [theme]=appInfo.theme></app-header>
     <div class="container mat-typography">
         <router-outlet></router-outlet>
     </div>

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VetPlatform.Data;
 
 namespace VetPlatform.Data.Migrations.VetPlatform
 {
     [DbContext(typeof(VetPlatformContext))]
-    partial class VetPlatformContextModelSnapshot : ModelSnapshot
+    [Migration("20190812110912_AddUserId")]
+    partial class AddUserId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

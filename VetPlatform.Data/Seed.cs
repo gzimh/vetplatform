@@ -14,19 +14,22 @@ namespace VetPlatform.Data
             {
                 Id = _randomTenantId,
                 HostName = "pets.vetplatform.local",
-                Name = "Pets Clinic"
+                Name = "Pets Clinic",
+                Theme = "#3f51b5"
             },
             new Tenant
             {
                 Id = Guid.Parse("85029b8d-86f1-4c81-befc-a832819ad557"),
                 HostName = "meds.vetplatform.local",
-                Name = "Meds Clinic"
+                Name = "Meds Clinic",
+                Theme = "#33691e"
             },
             new Tenant
             {
                 Id = Guid.Parse("fe0024a5-5d18-4b2e-b2eb-59a0f42d1861"),
                 HostName = "localhost",
-                Name = "Dev"
+                Name = "Dev",
+                Theme = "#bf360c"
             }
         };
 

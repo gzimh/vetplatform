@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
 
 @Component({
@@ -6,15 +6,28 @@ import { OAuthService } from 'angular-oauth2-oidc';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit {
+  @Input()
+  name:string;
+  @Input()
+  theme:string;
+
+  loggedIn: boolean;
 
   constructor(private oauthService: OAuthService) { }
 
   ngOnInit() {
+    this.loggedIn = this.oauthService.hasValidIdToken() &&
+      this.oauthService.hasValidAccessToken();
   }
 
-  logOut(){
+  logOut() {
     this.oauthService.logOut()
+  }
+
+  logIn(){
+    alert("logged in clicked.")
   }
 
 }

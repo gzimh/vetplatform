@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using VetPlatform.Data.Models;
 
 namespace VetPlatform.Data.Providers
 {
@@ -30,6 +32,11 @@ namespace VetPlatform.Data.Providers
             var tenant = _context.Tenants.FirstOrDefault(t => t.HostName == host);
             if (tenant == null) throw new Exception($"Tenant not found: {host}");
             return tenant.Id;
+        }
+
+        public async Task<Tenant> GetTenant(Guid tenantId)
+        {
+            return await _context.Tenants.FindAsync(tenantId);
         }
     }
 }

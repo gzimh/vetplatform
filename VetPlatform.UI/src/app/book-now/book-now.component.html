@@ -1,1 +1,32 @@
-<p>BOOK HOME</p>
+<div class="book-now">
+  <mat-card class="book-now-form" [formGroup]="form">
+    <h1>Book Now</h1>
+    <mat-form-field class="hidden-date-input">
+      <input [min]="minDate" matInput formControlName="date" [matDatepicker]="picker" placeholder="Date"
+        (dateChange)="dateChanged('change', $event)">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error>Invalid format.</mat-error>
+    </mat-form-field>
+    <ng-container *ngIf="form.controls.date.value">
+      <br>
+      <mat-form-field>
+        <mat-label>Time</mat-label>
+        <mat-select required formControlName="time">
+          <mat-option *ngFor="let item of scheduleOptions" [value]="item.time" [disabled]="!item.isAvailable">
+            {{item.time}} <span *ngIf="!item.isAvailable"> - Not available</span>
+          </mat-option>
+        </mat-select>
+        <mat-error>This filed is required.</mat-error>
+      </mat-form-field>
+    </ng-container>
+
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Reason" formControlName="reason">
+    </mat-form-field>
+    <br />
+    <br />
+    <button [disabled]="form.invalid" (click)="save()" mat-raised-button color="primary">SAVE</button>
+  </mat-card>
+</div>

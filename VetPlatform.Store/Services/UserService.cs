@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using VetPlatform.Data;
+using VetPlatform.Data.Options;
 using VetPlatform.Store.Models;
 
 namespace VetPlatform.Store.Services

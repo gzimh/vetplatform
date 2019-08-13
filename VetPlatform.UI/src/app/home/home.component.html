@@ -1,3 +1,15 @@
+<h1>
+  VETPLATFORM
+</h1>
 <p>
-  WELCOME HOME
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt dui felis, ut mollis ex eleifend sed. Curabitur mollis felis ut dui ullamcorper bibendum. Maecenas rutrum in ligula sed dapibus. Suspendisse potenti. Donec dapibus nisi lorem, non maximus erat pretium sit amet.
 </p>
+<p>
+  Aenean ultricies eros ut tempus posuere. Vestibulum at nulla id velit consectetur auctor. Proin sed aliquam lacus, nec interdum est. Etiam imperdiet dolor ex, cursus eleifend tortor aliquam non.
+</p>
+<p *ngIf="learnMore">
+  Aliquam vitae ipsum rhoncus, finibus nibh ut, vulputate orci. In pretium nunc sed dui ultricies sagittis. Etiam accumsan erat vitae interdum volutpat. Vivamus in quam neque. Pellentesque varius ut lacus at tempus. In mollis neque id lorem tempus eleifend. Ut egestas imperdiet diam, at tempus nisi pulvinar ut. Ut nec volutpat enim, non sollicitudin diam. Aenean risus purus, tincidunt a diam ac, mattis dapibus velit. Nulla sed placerat est. Integer pellentesque, eros at pretium scelerisque, mi elit pharetra sem, eget luctus dui risus non quam. Aliquam non porta velit, eget elementum dui. Etiam tempor sapien ut dui porttitor, non malesuada odio consectetur. Nullam suscipit auctor velit, et tristique neque rhoncus id. Vivamus condimentum sem non erat dapibus finibus eu quis turpis.
+</p>
+<br />
+<button routerLink="book-now" mat-raised-button color="primary">BOOK NOW</button>
+<button *ngIf="!learnMore" (click)="learnMore = true" class="mat-button mat-primary">LEARN MORE</button>

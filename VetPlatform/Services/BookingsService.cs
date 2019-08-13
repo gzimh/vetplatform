@@ -30,6 +30,24 @@ namespace VetPlatform.Api.Services
             return booking;
         }
 
+        public async Task<List<ScheduleOption>> GetAvailableSchedules
+            (DateTime date)
+        {
+            var schedule = GetDefaultSchedule();
+
+            var bookings = await _context.Bookings
+                .Where(p => p.Schedule.Date == date.Date)
+                .ToListAsync();
+
+            //foreach (var scheduleItem in schedule)
+            //{
+            //    scheduleItem.IsAvailable = !bookings
+            //        .Any(p => p.Schedule.ToString("hh:mm tt") == scheduleItem.Time);
+            //}
+
+            return schedule;
+        }
+
         public async Task<BookingsResponseModel> GetBookings(BookingsRequestModel requestModel)
         {
             var responseModel = new BookingsResponseModel();
@@ -76,6 +94,22 @@ namespace VetPlatform.Api.Services
         public bool IsValidStatus(string status)
         {
             return ValidStatuses.Any(s => s == status);
+        }
+
+        private List<ScheduleOption> GetDefaultSchedule()
+        {
+            return new List<ScheduleOption>() {
+                new ScheduleOption("08:00 AM", false),
+                new ScheduleOption("09:00 AM"),
+                new ScheduleOption("10:00 AM", false),
+                new ScheduleOption("11:00 AM"),
+                new ScheduleOption("12:00 PM"),
+                new ScheduleOption("13:00 PM"),
+                new ScheduleOption("14:00 PM"),
+                new ScheduleOption("15:00 PM"),
+                new ScheduleOption("16:00 PM"),
+                new ScheduleOption("17:00 PM"),
+            };
         }
     }
 }

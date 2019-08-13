@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookingsComponent } from './bookings/bookings.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { BookNowComponent } from './book-now/book-now.component';
+import { AuthGuardService } from './shared/auth.guard';
 
 const routes: Routes = [
   {
@@ -12,6 +14,11 @@ const routes: Routes = [
   {
     path:'register',
     component: RegisterComponent
+  },
+  {
+    path:'book-now',
+    component: BookNowComponent,
+    canActivate:[AuthGuardService]
   },
   {
     path: 'admin',
