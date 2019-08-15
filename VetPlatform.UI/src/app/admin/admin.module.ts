@@ -3,12 +3,9 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
-import { OAuthModule } from 'angular-oauth2-oidc';
-import { AuthService } from '../shared/auth.service';
-import { AuthInterceptor } from '../shared/auth.interceptor';
 import { Routes, RouterModule } from '@angular/router';
 import { BookingsComponent } from '../bookings/bookings.component';
 import { CustomDatePickerComponent } from '../custom-date-picker/custom-date-picker.component';
@@ -38,14 +35,9 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    RouterModule.forRoot(routes),
-    OAuthModule.forRoot()
+    RouterModule.forRoot(routes)
   ],
   exports: [],
-  providers: [AuthService, {
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi: true
-  }],
+  providers: [],
 })
 export class AdminModule { }

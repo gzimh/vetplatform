@@ -5,12 +5,19 @@
     </div>
 </ng-container>
 
-<ng-container *ngIf="loading">
+<ng-container *ngIf="loading && !error">
     <div class="loading-container">
         <mat-card>
                 <img src="../assets/happy_pup.png" />
                 <h1 class="mat-h1">Loading...</h1>
         </mat-card>
+    </div>
+</ng-container>
 
+<ng-container *ngIf="!loading && error">
+    <div class="loading-container">
+        <mat-card>
+                <h1 class="mat-h1">Something went wrong</h1>
+        </mat-card>
     </div>
 </ng-container>

@@ -4,7 +4,6 @@ import { BookingsService } from '../services/bookings.service';
 import { ScheduleOption } from '../models/schedule-option';
 import * as moment from 'moment';
 import { MatSnackBar } from '@angular/material';
-import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-book-now',
