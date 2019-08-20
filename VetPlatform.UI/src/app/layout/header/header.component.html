@@ -2,7 +2,7 @@
     <div routerLink="/" class="store-name">{{name}}</div>
     <button *ngIf="loggedIn" mat-button routerLink="book-now">BOOK NOW</button>
     <div class="flex-grow"></div>
-    <button *ngIf="loggedIn" mat-button (click)="logOut()">LOG OUT</button>
-    <button *ngIf="!loggedIn" mat-button (click)="logIn()">LOG IN</button>
+    <button  mat-button (click)="logOut()">LOG OUT</button>
+    <button  mat-button (click)="logIn()">LOG IN</button>
     <button *ngIf="!loggedIn" mat-button routerLink="register">REGISTER</button>
 </mat-toolbar>

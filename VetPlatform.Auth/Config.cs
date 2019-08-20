@@ -31,6 +31,7 @@ namespace VetPlatform.Auth
 
         public static IEnumerable<Client> GetClients()
         {
+            var dev = "http://localhost:4200";
             var pets = "http://pets.vetplatform.local:4200";
             var meds = "http://meds.vetplatform.local:4201";
             var mystore = "http://mystore.vetplatform.local:4202";
@@ -47,9 +48,9 @@ namespace VetPlatform.Auth
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
 
-                    RedirectUris = { pets, meds, mystore},
-                    PostLogoutRedirectUris = { pets, meds, mystore },
-                    AllowedCorsOrigins = { pets, meds, mystore },
+                    RedirectUris = { dev, pets, meds, mystore},
+                    PostLogoutRedirectUris = { dev, pets, meds, mystore },
+                    AllowedCorsOrigins = { dev, pets, meds, mystore },
 
                     AllowedScopes = { "openid", "profile", "vp_portal_api", "role", "tenantId" },
 

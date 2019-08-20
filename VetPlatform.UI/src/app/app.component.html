@@ -2,6 +2,10 @@
     <app-header [name]="appInfo.name" [theme]=appInfo.theme></app-header>
     <div class="container mat-typography">
         <router-outlet></router-outlet>
+        <br />
+        <br />
+        <br />
+        <p style="word-break: break-all;">{{accessToken()}}</p>
     </div>
 </ng-container>
 

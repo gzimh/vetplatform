@@ -14,7 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { AdminModule } from './admin/admin.module';
 import { AppService } from './services/app.service';
 import { BookNowComponent } from './book-now/book-now.component';
-import { AuthGuardService } from './shared/auth.guard';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 
 @NgModule({
@@ -33,11 +33,11 @@ import { AuthGuardService } from './shared/auth.guard';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    AdminModule
+    AdminModule,
+    OAuthModule.forRoot()
   ],
   providers: [
-    AppService,
-    AuthGuardService],
+    AppService],
   bootstrap: [AppComponent],
   entryComponents: [ChangeStatusComponent]
 })
