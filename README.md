@@ -8,4 +8,4 @@ The purpose of this repository is to serve as an example of a real-world multi-t
 * VetPlatform.UI - Angular SPA project
 * VetPlatform - .Net Core Web Api
 
-This project is still in developement, feel free to ask me any questions about it at: gzimh@codefreaks.io
+This project is on passive development, but feel free to ask me any questions about it at: gzimh@codefreaks.io
